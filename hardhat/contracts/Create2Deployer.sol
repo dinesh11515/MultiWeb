@@ -29,7 +29,11 @@ contract Create2Deployer is Ownable, Pausable {
      * - the factory must have a balance of at least `value`.
      * - if `value` is non-zero, `bytecode` must have a `payable` constructor.
      */
-    function deploy(uint256 value, bytes32 salt, bytes memory code) public whenNotPaused {
+    function deploy(
+        uint256 value,
+        bytes32 salt,
+        bytes memory code
+    ) public whenNotPaused {
         Create2.deploy(value, salt, code);
     }
 
@@ -37,7 +41,10 @@ contract Create2Deployer is Ownable, Pausable {
      * @dev Deployment of the {ERC1820Implementer}.
      * Further information: https://eips.ethereum.org/EIPS/eip-1820
      */
-    function deployERC1820Implementer(uint256 value, bytes32 salt) public whenNotPaused {
+    function deployERC1820Implementer(
+        uint256 value,
+        bytes32 salt
+    ) public whenNotPaused {
         Create2.deploy(value, salt, type(ERC1820Implementer).creationCode);
     }
 
@@ -45,7 +52,10 @@ contract Create2Deployer is Ownable, Pausable {
      * @dev Returns the address where a contract will be stored if deployed via {deploy}.
      * Any change in the `bytecodeHash` or `salt` will result in a new destination address.
      */
-    function computeAddress(bytes32 salt, bytes32 codeHash) public view returns (address) {
+    function computeAddress(
+        bytes32 salt,
+        bytes32 codeHash
+    ) public view returns (address) {
         return Create2.computeAddress(salt, codeHash);
     }
 
@@ -93,7 +103,9 @@ contract Create2Deployer is Ownable, Pausable {
      * with exactly the same behavior as would arise if the first byte in the init code were an invalid opcode.
      * This applies retroactively starting from genesis.
      */
-    function killCreate2Deployer(address payable payoutAddress) public onlyOwner {
+    function killCreate2Deployer(
+        address payable payoutAddress
+    ) public onlyOwner {
         payoutAddress.transfer(address(this).balance);
         selfdestruct(payoutAddress);
     }

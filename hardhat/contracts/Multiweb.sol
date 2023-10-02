@@ -5,7 +5,7 @@ import "./interfaces/IWormholeReceiver.sol";
 import {Create2} from "@openzeppelin/contracts/utils/Create2.sol";
 import {Initializable} from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 
-contract XDeployer is IWormholeReceiver, Initializable {
+contract Multiweb is IWormholeReceiver, Initializable {
     // Interface for the connext xcall function
     IWormholeRelayer public wormholeRelayer;
     uint256 constant GAS_LIMIT = 2_000_000;
