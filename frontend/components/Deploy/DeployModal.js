@@ -36,6 +36,7 @@ const DeployModal = ({
   const [startDeploying, setStartDeploying] = useState(false);
   const [deploymentSuccess, setDeploymentSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [tx, setTx] = useState("");
   const [salt, setSalt] = useState("");
   const [computedAddress, setComputedAddress] = useState("");
 
@@ -110,6 +111,7 @@ const DeployModal = ({
           value: totalFee,
         });
         console.log(hash, "tx");
+        setTx(hash);
 
         await waitForTransaction({ hash: hash });
       } else {
@@ -120,6 +122,7 @@ const DeployModal = ({
           args: [saltbytes, bytecode, "0x"],
         });
         console.log(hash, "tx");
+        setTx(hash);
 
         await waitForTransaction({ hash: hash });
       }
@@ -146,12 +149,8 @@ const DeployModal = ({
             {deploymentSuccess && (
               <button
                 onClick={() => {
-                  router.push(
-                    `/address/${computedAddress}/?chain=${
-                      formData.currentDeployChain.chainName
-                        .toLowerCase()
-                        .split(" ")[0]
-                    }`
+                  window.open(
+                    "https://wormholescan.io/#/tx/" + tx + "?network=TESTNET"
                   );
                 }}
                 className="py-3 px-7 rounded-md bg-[#1F423A] hover:bg-[#1a3831] text-green-300 border border-gray-600 mt-4 w-full"
