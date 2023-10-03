@@ -1,0 +1,35 @@
+{
+  "name": "multiweb",
+  "version": "0.1.1",
+  "description": "multichain deployment tool",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinesh11515/MultiWeb"
+  },
+  "bin": "./app.js",
+  "keywords": [
+    "multichain",
+    "deploy",
+    "deployment"
+  ],
+  "author": "Dinesh Aitham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinesh11515/MultiWeb"
+  },
+  "homepage": "https://github.com/dinesh11515/MultiWeb",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "cli-spinners": "^2.9.1",
+    "inquirer": "^9.2.10",
+    "ora": "^7.0.1",
+    "solc": "^0.8.18",
+    "web3.storage": "^4.5.5"
+  },
+  "shell": "/bin/bash"
+}

@@ -5,6 +5,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.9.3",
-    "dotenv": "^16.3.1"
+    "crossx": "^0.1.6",
+    "dotenv": "^16.3.1",
+    "multiweb": "^0.1.0"
   }
 }
