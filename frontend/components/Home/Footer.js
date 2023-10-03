@@ -34,14 +34,6 @@ const Footer = () => {
           >
             Deploy
           </li>
-          <li
-            onClick={() => {
-              router.push("/addContract");
-            }}
-            className="cursor-pointer hover:scale-105"
-          >
-            Add Contract
-          </li>
         </ul>
       </div>
     </div>

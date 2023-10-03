@@ -19,7 +19,7 @@ const LandingPage = () => {
       </Head>
 
       <main className="min-h-screen bg-[black]">
-        <Parallax pages={5}>
+        <Parallax pages={3}>
           <Navbar isLanding={true} />
 
           <ParallaxLayer
@@ -34,7 +34,7 @@ const LandingPage = () => {
             <About />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={4.3} speed={0.2}>
+          <ParallaxLayer offset={2.4} speed={0.2}>
             <div className="m-0">
               <p className="text-white text-6xl text-center leading-[80px] tracking-wide font-Poppins">
                 Built for Innovators, by Innovators
