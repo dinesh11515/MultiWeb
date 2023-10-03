@@ -7,8 +7,6 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      {router.pathname === "/explorer" && <Navbar bgColor={"bg-[black]"} />}
-
       {router.pathname === "/deploy" && <Navbar bgColor={"bg-[#171717]"} />}
 
       {children}

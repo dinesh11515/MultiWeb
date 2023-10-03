@@ -81,31 +81,6 @@ const About = () => {
           />
         </div>
       </>
-
-      {/* <div className="mt-60 ">
-        <h2 className="text-7xl font-Poppins text-center tracking-wide leading-[90px]  uppercase font-semibold">
-          Add Existing Contracts!
-        </h2>
-        <p className="text-md font-Poppins text-center mt-10  text-gray-500">
-          Manage your existing contracts with our integrated UMA protocol.
-        </p>
-        <p className="text-md font-Poppins text-center  text-gray-500 mt-1 ">
-          Add all your existing multichain contracts and access them easily with
-          our explorer. So why wait? Let's get started
-        </p>
-
-        <button
-          onClick={() => {
-            router.push('/addContract');
-          }}
-          className="mt-10 flex items-center gap-2 mx-auto justify-center hover:gap-4 delay-100 transition-all ease-in-out rounded-full py-4 bg-black w-[200px] text-white font-semibold font-Poppins"
-        >
-          Add Contract
-          <span>
-            <AiOutlineArrowRight />
-          </span>
-        </button>
-      </div> */}
     </section>
   );
 };
