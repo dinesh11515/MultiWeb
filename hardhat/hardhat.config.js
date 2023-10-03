@@ -17,7 +17,7 @@ module.exports = {
 
   networks: {
     mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com",
+      url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
       accounts: [process.env.PRIVATE_KEY],
     },
     bsc: {

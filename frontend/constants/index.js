@@ -1,4 +1,4 @@
-export const contractAddress = "";
+export const contractAddress = "0xd82A7411350C4F073C40d14cE23E80b1a8Ef0d0e";
 export const wormholeChains = {
   "Polygon Mumbai Testnet": 5,
   "Bsc Testnet": 4,

@@ -16,7 +16,7 @@ async function main() {
     "0x13b0D85CcB8bf860b6b79AF3029fCA081AE9beF2"
   );
 
-  const XDeployer = await hre.ethers.getContractFactory("Mutliweb");
+  const XDeployer = await hre.ethers.getContractFactory("Multiweb");
   const salt =
     "0x0000000000000000000000000000000000000000000000000000000000001011";
   console.log("salt", salt);
